@@ -1,12 +1,3 @@
-// List of fictional emails
-const emails = [
-    'john@example.com',
-    'mary@example.com',
-    'peter@example.com',
-    'anna@example.com',
-    'charles@example.com'
-];
-
 // List to store failed emails
 const failedEmails = [];
 
@@ -31,7 +22,7 @@ async function sendEmail(url = "", data = {}) {
 // Main function to process emails
 async function processEmails() {
     console.log('Starting email processing...');
-
+    const emails = document.getElementById('emails').value.split(' ');
     for (const email of emails) {
         const data = {
             "email": email,
@@ -79,6 +70,7 @@ function openPopup() {
             background-color: #fff;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             width: 300px;
+            z-index: 1000;
         }
 
         .popup-title {
