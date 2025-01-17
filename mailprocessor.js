@@ -121,4 +121,12 @@ function openPopup() {
     popup.style.display = 'block';
 }
 
+function closePopup() {
+    const popup = document.getElementById('popup');
+    if (popup) {
+        popup.style.display = 'none';
+        document.body.removeChild(popup);
+    }
+}
+
 openPopup();
