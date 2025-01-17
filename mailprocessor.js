@@ -37,7 +37,9 @@ async function processEmails() {
             "email": email,
             "app_id": "12"
         }
-        const result = await sendEmail('https://api-example.com/send', data);
+        const url = ''; // Add the URL of the email sending API
+        
+        const result = await sendEmail(url, data);
 
         if (result) {
             console.log(`✅ Email sent successfully: ${email}`);
